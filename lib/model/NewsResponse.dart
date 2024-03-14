@@ -4,6 +4,7 @@ import 'package:news_app/model/SourceResponse.dart';
 import 'package:news_app/model/SourceResponse.dart';
 import 'package:news_app/model/SourceResponse.dart';
 import 'package:news_app/model/SourceResponse.dart';
+import 'package:news_app/model/SourceResponse.dart';
 
 import 'SourceResponse.dart';
 import 'SourceResponse.dart';
@@ -76,7 +77,7 @@ class Article {
     this.content,});
 
   Article.fromJson(dynamic json) {
-    source = json['source'] != null ? Source.fromJson(json['source']) : null;
+    source = json['source'] != null ? Sourcee.fromJson(json['source']) : null;
     author = json['author'];
     title = json['title'];
     description = json['description'];
@@ -86,7 +87,7 @@ class Article {
     content = json['content'];
   }
 
-  Source? source;
+  Sourcee? source;
   String? author;
   String? title;
   String? description;
@@ -116,19 +117,19 @@ class Article {
 /// id : null
 /// name : "Gizmodo.com"
 
-/*class Source {
-  Source({
+class Sourcee {
+  Sourcee({
     this.id,
-    this.name,});*/
+    this.name,
+  });
 
-Source.fromJson
-(
-dynamic json) {
-id = json['id'];
-name = json['name'];
-}
-dynamic id;
-String? name;
+  Sourcee.fromJson(dynamic json) {
+    id = json['id'];
+    name = json['name'];
+  }
+
+  dynamic id;
+  String? name;
 
 Map<String, dynamic> toJson() {
 final map = <String, dynamic>{};

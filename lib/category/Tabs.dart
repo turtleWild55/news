@@ -6,7 +6,7 @@ import '../model/SourceResponse.dart';
 
 class Tabs extends StatefulWidget {
   List<Source> sources = [];
-
+///Function onArticleClick;
   Tabs({required this.sources});
 
   @override
@@ -38,7 +38,10 @@ class _TabsState extends State<Tabs> {
                           source: source,
                         ))
                     .toList()),
-            News(source: widget.sources[selectedIndex])
+            Expanded(
+                child: News(
+              source: widget.sources[selectedIndex],
+            ))
           ],
         ));
   }

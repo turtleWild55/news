@@ -10,7 +10,6 @@ class Themes {
   static Color pink = Color(0xffED1E79);
 
   static ThemeData lightTheme = ThemeData(
-      scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
           centerTitle: true,
           color: green,
